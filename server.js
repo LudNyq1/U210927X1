@@ -10,4 +10,4 @@ const server = http.createServer((req, res) =>{
 });
 
 console.log('Sever is up and running on this computer!');
-server.listen(8089);
+server.listen(process.env.PORT || 8089); //Listens to the local port and heroku
