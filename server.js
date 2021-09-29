@@ -1,13 +1,11 @@
 const http = require('http'); //Imports modules froms nodeJs
-const fs = requrie('fs');   //File system module, read write and read.
-
+const fs = require('fs');   //File system module, read write and read.
 
 const server = http.createServer((req, res) =>{
     fs.readFile('index.html', (err, data)=>{
-        res.writeHead('200', {'Content-type' : 'text/html'});
+        res.writeHead('200', {'Content-Type' : 'text/html'});
         res.write(data);
         res.end();
-
     });
 });
 
